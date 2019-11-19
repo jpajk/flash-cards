@@ -1,32 +1,11 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
+import {createAppContainer} from "react-navigation";
+import AppNavigation from './src/navigation';
+
+const AppContainer = createAppContainer(AppNavigation);
 
 const App = () => {
-  return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <View>
-          <Text>Hello world!</Text>
-        </View>
-      </SafeAreaView>
-    </>
-  );
+  return <AppContainer />;
 };
 
 export default App;
